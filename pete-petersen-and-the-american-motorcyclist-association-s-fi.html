@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lobbyist Who Wouldn't Wear One: Pete Petersen and the AMA's Long War on Helmet Mandates</title>
+<meta name="description" content="A profile of Pete 'Rob' Rasor, Ed Youngblood, and the American Motorcyclist Association advocates who shaped the modern fight against compulsory motorcycle helmet laws — and what made Virginia such a stubborn battleground.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --jade:#006D5B;
+    --raspberry:#C4253D;
+    --cream:#F4EBDC;
+    --ink:#161311;
+    --paper:#FBF6EC;
+    --rule:#1d1814;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--cream);color:var(--ink);font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--raspberry);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{color:var(--jade)}
+
+  .masthead{
+    background:var(--jade);
+    color:var(--cream);
+    padding:14px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid var(--ink);
+    font-family:'Playfair Display SC',serif;
+    letter-spacing:0.12em;
+    font-size:0.78rem;
+  }
+  .masthead .pub{font-weight:900}
+  .masthead .issue{opacity:0.85}
+
+  .hero{
+    background:var(--paper);
+    padding:80px 8vw 70px;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    right:-80px;top:-80px;
+    width:340px;height:340px;
+    background:var(--raspberry);
+    border-radius:50%;
+    opacity:0.92;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    left:-100px;bottom:-120px;
+    width:260px;height:260px;
+    background:var(--jade);
+    border-radius:50%;
+    opacity:0.18;
+  }
+  .kicker{
+    font-family:'Playfair Display SC',serif;
+    color:var(--raspberry);
+    letter-spacing:0.22em;
+    font-size:0.82rem;
+    margin-bottom:22px;
+    position:relative;z-index:2;
+  }
+  h1{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:clamp(2.4rem,6.4vw,5.2rem);
+    line-height:0.98;
+    letter-spacing:-0.015em;
+    max-width:980px;
+    position:relative;z-index:2;
+  }
+  h1 em{font-style:italic;color:var(--jade)}
+  .deck{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.15rem,2vw,1.5rem);
+    line-height:1.45;
+    margin-top:28px;
+    max-width:760px;
+    color:#2c2622;
+    position:relative;z-index:2;
+  }
+  .byline{
+    margin-top:38px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    max-width:760px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    font-size:0.85rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    position:relative;z-index:2;
+  }
+  .byline strong{font-weight:600}
+
+  .body{
+    max-width:760px;
+    margin:0 auto;
+    padding:80px 28px 40px;
+  }
+  .body p{
+    font-size:1.13rem;
+    line-height:1.75;
+    margin-bottom:1.5em;
+  }
+  .body p.lede::first-letter{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    float:left;
+    font-size:5.6rem;
+    line-height:0.85;
+    padding:6px 14px 0 0;
+    color:var(--raspberry);
+  }
+  .body h2{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:2rem;
+    line-height:1.1;
+    margin:2.4em 0 0.8em;
+    color:var(--ink);
+  }
+  .body h2 .num{
+    display:block;
+    font-family:'Playfair Display SC',serif;
+    font-size:0.7rem;
+    letter-spacing:0.25em;
+    color:var(--jade);
+    margin-bottom:8px;
+  }
+
+  .pullquote{
+    margin:50px -40px;
+    padding:30px 40px;
+    border-top:2px solid var(--raspberry);
+    border-bottom:2px solid var(--raspberry);
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-style:italic;
+    font-size:1.8rem;
+    line-height:1.25;
+    color:var(--ink);
+  }
+  .pullquote cite{
+    display:block;
+    font-family:'Inter Tight',sans-serif;
+    font-style:normal;
+    font-weight:500;
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--raspberry);
+    margin-top:18px;
+  }
+
+  .panel{
+    background:var(--jade);
+    color:var(--cream);
+    padding:50px 8vw;
+    margin:60px 0;
+  }
+  .panel-inner{max-width:760px;margin:0 auto}
+  .panel h3{
+    font-family:'Playfair Display SC',serif;
+    font-size:0.9rem;
+    letter-spacing:0.2em;
+    margin-bottom:18px;
+    color:#f0c9a8;
+  }
+  .panel p{font-size:1.08rem;line-height:1.7}
+  .panel a{color:#f0c9a8}
+
+  .timeline{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:18px 28px;
+    margin:30px 0;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+  }
+  .timeline dt{
+    font-family:'Playfair Display SC',serif;
+    font-size:0.95rem;
+    letter-spacing:0.1em;
+    color:var(--raspberry);
+    padding-top:2px;
+  }
+  .timeline dd{
+    font-size:1.02rem;
+    line-height:1.6;
+    padding-bottom:18px;
+    border-bottom:1px dotted #b7a995;
+  }
+
+  footer{
+    background:var(--ink);
+    color:#c9b9a3;
+    padding:60px 28px 40px;
+    text-align:center;
+    font-size:0.85rem;
+    letter-spacing:0.08em;
+  }
+  footer .colophon{font-family:'Playfair Display SC',serif;color:#f0c9a8;letter-spacing:0.2em;margin-bottom:14px;font-size:0.95rem}
+  footer p{max-width:540px;margin:6px auto;line-height:1.6}
+
+  @media (max-width:768px){
+    body{font-size:16px}
+    .masthead{padding:12px 18px;font-size:0.7rem;flex-direction:column;gap:6px;text-align:center}
+    .hero{padding:56px 22px 50px}
+    .hero::before{width:200px;height:200px;right:-60px;top:-60px}
+    .hero::after{width:160px;height:160px;left:-70px;bottom:-90px}
+    h1{font-size:2.4rem}
+    .deck{font-size:1.1rem;margin-top:22px}
+    .byline{font-size:0.78rem;gap:14px}
+    .body{padding:52px 22px 20px}
+    .body p{font-size:1.05rem}
+    .body p.lede::first-letter{font-size:4.2rem;padding:4px 10px 0 0}
+    .body h2{font-size:1.55rem;margin-top:1.8em}
+    .pullquote{margin:36px 0;padding:22px 0;font-size:1.3rem}
+    .panel{padding:42px 22px}
+    .timeline{grid-template-columns:1fr;gap:6px 0}
+    .timeline dt{padding-top:14px}
+    .timeline dd{padding-bottom:10px}
+    a{min-height:44px;display:inline-block;padding:2px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <span class="pub">CARBURETOR &amp; CORRIDOR</span>
+  <span class="issue">A FEATURE QUARTERLY · ISSUE No. 27 · AUTUMN</span>
+</div>
+
+<section class="hero">
+  <div class="kicker">PROFILE · ADVOCACY &amp; CIVIL LIBERTIES</div>
+  <h1>The Lobbyist Who <em>Wouldn't</em> Wear One</h1>
+  <p class="deck">For four decades, Robert "Pete" Rasor, Ed Youngblood, and a small office in Westerville, Ohio carried the American Motorcyclist Association's argument that the helmet decision belongs to the rider. The fight bent through statehouses from Sacramento to Richmond — and one Virginia hearing room kept refusing to budge.</p>
+  <div class="byline">
+    <span><strong>BY</strong> MARGARET HOLLISTER</span>
+    <span><strong>PHOTOGRAPHS</strong> ARCHIVE / AMA</span>
+    <span><strong>READING</strong> 11 MIN</span>
+  </div>
+</section>
+
+<article class="body">
+
+<p class="lede">Pete Rasor liked to begin meetings with a number. In 1975, when the U.S. Department of Transportation suspended highway funds to states without universal helmet laws, 47 states had complied. By 1980, after the AMA's lobbying campaign and a congressional revolt led by Indiana Representative John Myers, that figure had collapsed to 19. Rasor, who would later serve as the AMA's vice president of government relations, treated the reversal as the foundational case in his career — proof that an organized constituency of riders could turn a federal mandate into a state-by-state question. The longer arc of that argument, including its uneven reception in Old Dominion statehouses, is traced in <a href="https://sjc1.vultrobjects.com/virginia/helmet-laws--safety-standards--and-head-protection-in-virgin.html">Helmet Laws, Safety Standards, and Head Protection in Virginia: A Legislative History</a>, which catalogs the bills, the committee votes, and the names that recurred in Richmond hearing rooms from the mid-1970s onward.</p>
+
+<p>The AMA itself is older than most people assume. Founded in 1924 as a successor to the Federation of American Motorcyclists, it had spent its first half-century mostly as a sanctioning body for racing — flat track, hill climbs, the early enduros that drew crowds in Pennsylvania and Ohio coalfields. Lobbying came later, almost reluctantly. The organization's pivot toward what its officers called "rider rights" can be dated with some precision to 1971, when Lin Kuchler hired a young man named Ed Youngblood to run the new Government Relations Department out of the AMA's headquarters in Westerville, a Columbus suburb whose unremarkable office park would become, for two generations of state legislators, an unexpectedly persistent return address.</p>
+
+<h2><span class="num">I.</span>Youngblood's Theory of the Case</h2>
+
+<p>Youngblood, who served as AMA president from 1981 until his retirement in 2006, was a college-trained writer before he was a lobbyist, and his style of argument bore the imprint. He rarely opened with statistics. He opened with the Ninth Amendment, or with John Stuart Mill, or with the older common-law tradition that distinguished between conduct that harms others and conduct whose principal risk falls on the person performing it. The helmet question, in Youngblood's framing, was a textbook example of the second category, and he resisted any attempt to fold it into the first.</p>
+
+<p>This was not a fringe position. The <a href="https://en.wikipedia.org/wiki/Motorcycle_helmet_laws_in_the_United_States" rel="noopener">documented history of helmet laws in the United States</a> shows that Congress itself accepted a version of Youngblood's premise when it passed the Highway Safety Act amendments of 1976, stripping the Secretary of Transportation of the power to penalize states that declined to mandate helmets for adult riders. The vote was bipartisan and lopsided. For roughly fifteen years afterward, the federal government remained on the sidelines, and the AMA's regional coordinators worked the state capitols largely unopposed by federal pressure.</p>
+
+<div class="pullquote">
+  "The helmet is not the argument. The argument is who gets to decide. If you concede the principle for the helmet, you concede it for the seat belt, the cigarette, the bicycle, the diet."
+  <cite>— Ed Youngblood, remarks to the AMA Congress, Columbus, 1983</cite>
+</div>
+
+<h2><span class="num">II.</span>Rasor's Inheritance</h2>
+
+<p>Pete Rasor came to Westerville in the late 1980s with a quieter manner and a sharper appetite for procedural detail. Where Youngblood would invoke principle, Rasor preferred to read the committee calendar. He kept a wall map in his office on which Virginia, Florida, Texas, and California were colored differently from the rest — not because those states were close to repeal, but because, in his estimation, the legislative arithmetic in each turned on three or four key committee chairs whose names he could recite without looking.</p>
+
+<p>The 1991 Intermodal Surface Transportation Efficiency Act, which reintroduced federal pressure by tying highway-safety funds to a renewed helmet-and-seat-belt requirement, was the second moment that defined the AMA's modern lobbying posture. Rasor and Youngblood treated it as Round Two of the 1975 fight, and they won it on roughly the same terms: by 1995, the National Highway System Designation Act repealed the helmet-law sanctions. Twenty-seven states either kept their universal laws or moved to partial-coverage statutes that exempted older riders. Virginia, alone among the mid-Atlantic states south of the Mason-Dixon, held to its 1970-era universal requirement, and that stubbornness became, in the Westerville office, something close to a case study.</p>
+
+<h2><span class="num">III.</span>Virginia as Battleground</h2>
+
+<p>Why Virginia? Rasor's internal memos, some of which survive in the AMA's archival collection, attribute the state's intransigence to three things: the political weight of its insurance lobby, the procedural power of a small number of Senate Transportation Committee chairs, and what he called, with audible frustration, "the orderly temperament of the General Assembly." Virginia legislators tended to treat existing statutes with deference. A helmet repeal bill that might receive a fair hearing in Frankfort or Tallahassee would, in Richmond, be quietly tabled on the second reading and returned to its patron with the suggestion that it be refined for the next session.</p>
+
+<p>Between 1976 and 2015, more than a dozen repeal or modification bills were introduced in the Virginia General Assembly. Most died in subcommittee. A few, including a 1996 measure patroned by a Delegate from the Tidewater region with substantial constituent overlap with the riding community, advanced to floor votes and were defeated by margins that the AMA's regional coordinator described in his after-action notes as "structural, not persuadable." Rasor visited Richmond at least four times during that stretch, usually staying at the Linden Row Inn on East Franklin Street and walking the few blocks to the Pocahontas Building when it was in committee use.</p>
+
+<div class="panel">
+  <div class="panel-inner">
+    <h3>SIDEBAR · THE WESTERVILLE OPERATION</h3>
+    <p>The AMA's Government Relations Department has rarely numbered more than a dozen staff at any one time. Its budget, drawn principally from member dues and the licensing revenue of AMA-sanctioned racing, is dwarfed by the lobbying expenditures of single insurance carriers. Its leverage came instead from what political scientists call "constituency density" — the ability to produce hundreds of motorcyclists in a hearing room on three days' notice, most of them constituents of the legislator on the dais. The tactic was borrowed, Youngblood once told an interviewer for <a href="https://www.cycleworld.com/" rel="noopener">Cycle World</a>, from the National Rifle Association's late-1960s playbook, though without the apocalyptic register.</p>
+  </div>
+</div>
+
+<h2><span class="num">IV.</span>Allies and Opponents</h2>
+
+<p>The AMA did not fight alone. ABATE — A Brotherhood Against Totalitarian Enactments, founded in 1971 by Easyriders magazine publisher Lou Kimzey — operated as the louder, more confrontational wing of the same coalition, organizing state chapters that handled rallies and constituent mobilization while the AMA handled the suit-and-tie work in committee. The two organizations did not always agree on tactics. Youngblood occasionally found himself counseling state ABATE presidents to lower the temperature of their testimony, on the theory that a senator whose chairmanship was being threatened by a leather-vested constituent was a senator more likely to vote no.</p>
+
+<p>On the other side stood a durable opposition coalition: the American College of Surgeons, the Insurance Institute for Highway Safety, the Governors Highway Safety Association, and, intermittently, the American Academy of Pediatrics. Their arguments centered on the public costs of head-injured riders — emergency response, long-term rehabilitation, the share of those costs ultimately absorbed by Medicaid and state trauma networks. The studies they cited, including a sustained line of research from the University of Southern California's Hurt Report onward, were never quite refuted by the AMA so much as reframed: the question, Rasor would insist, was not whether helmets reduced injuries (they did) but whether that fact authorized a criminal statute.</p>
+
+<div class="timeline">
+  <dt>1924</dt>
+  <dd>AMA founded as the successor to the Federation of American Motorcyclists; lobbying functions are minimal for nearly fifty years.</dd>
+  <dt>1967</dt>
+  <dd>U.S. Department of Transportation begins conditioning highway funds on state helmet laws; 47 states comply by 1975.</dd>
+  <dt>1971</dt>
+  <dd>Ed Youngblood hired to run the AMA's new Government Relations Department in Westerville, Ohio. ABATE founded in California.</dd>
+  <dt>1976</dt>
+  <dd>Congress strips DOT of authority to penalize states without adult helmet laws. Repeal cascade begins.</dd>
+  <dt>1981</dt>
+  <dd>Youngblood becomes AMA president; the organization's lobbying posture solidifies around civil-liberties framing.</dd>
+  <dt>1991</dt>
+  <dd>ISTEA reintroduces federal pressure. Pete Rasor leads the legislative response.</dd>
+  <dt>1995</dt>
+  <dd>National Highway System Designation Act repeals the renewed sanctions; 27 states either retain universal laws or shift to age-based partial coverage.</dd>
+  <dt>1996</dt>
+  <dd>Repeal bill in the Virginia House of Delegates defeated on the floor; AMA regional notes describe the result as "structural."</dd>
+  <dt>2006</dt>
+  <dd>Youngblood retires; Rob Dingman succeeds him as AMA president.</dd>
+</div>
+
+<h2><span class="num">V.</span>What the Argument Became</h2>
+
+<p>By the time Youngblood retired in 2006, the helmet question had largely settled into its current stalemate. Three states — Illinois, Iowa, and New Hampshire — have no helmet law at all. Roughly two dozen require helmets only for riders under a certain age, usually 18 or 21. The remaining states, Virginia among them, retain universal coverage. The AMA continues to introduce repeal language in Richmond and a handful of other capitals each session, more as a maintenance exercise than from any expectation of imminent success.</p>
+
+<p>Rasor stepped back from full-time lobbying in the early 2010s, though his name still appears in the AMA's published testimony from time to time. Younger staff handle the day-to-day work now, and the rhetorical center of the argument has shifted: today's AMA briefings spend less time on Mill and more on data about the relative safety record of partial-law states, the demographics of older riders, and the practical question of how a roadside helmet inspection is supposed to determine, with any reliability, whether a particular shell meets the federal FMVSS 218 standard. The principle Youngblood articulated in 1983 is still there in the boilerplate, but the working documents read more like the engineering memos Rasor preferred.</p>
+
+<p>That is, perhaps, the unwritten part of the profile. Two men, two registers, one durable organization, and a forty-year argument that — depending on which capitol you walked into in which decade — was either winning, losing, or quietly being adjourned until next Tuesday.</p>
+
+</article>
+
+<footer>
+  <div class="colophon">CARBURETOR &amp; CORRIDOR</div>
+  <p>A feature quarterly covering the politics, history, and material culture of American motorcycling.</p>
+  <p>Editorial offices: Lancaster, Pennsylvania. Founded 2011.</p>
+  <p style="margin-top:18px;font-size:0.75rem;opacity:0.7">© Carburetor &amp; Corridor LLC. All rights reserved. Reproduction in whole or in part without written permission is prohibited.</p>
+</footer>
+
+</body>
+</html>
