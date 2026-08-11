@@ -1,0 +1,530 @@
+# robots.txt — last reviewed 2026-08-11
+#
+# Policy:
+#   - BLOCK   SEO / backlink / marketing analysis crawlers
+#   - BLOCK   AI training + dataset-harvesting crawlers
+#   - BLOCK   archival, mirroring, and bulk-scraping tools
+#   - ALLOW   traditional search engines
+#   - ALLOW   user-facing AI search / answer / assistant agents
+#
+# Note: robots.txt is advisory. Badly-behaved scrapers ignore it entirely.
+# Anything that actually needs enforcing belongs in a WAF / rate-limit rule.
+
+# === Content Signals (contentsignals.org) ===
+# Machine-readable statement of intent that complements the rules below.
+# search   = building a search index and returning links/short excerpts
+# ai-input = feeding content to a model at request time (RAG, grounding, AI answers)
+# ai-train = training or fine-tuning models
+#
+# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF
+# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
+# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
+#
+# (Google Search Console may report "Syntax not understood" for this directive.
+#  It's a known false positive with no observed crawl or ranking impact.)
+
+# === SEO / Backlink / Marketing analysis crawlers ===
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: AhrefsSiteAudit
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SemrushBot-SI
+Disallow: /
+
+User-agent: SemrushBot-SWA
+Disallow: /
+
+User-agent: SemrushBot-CT
+Disallow: /
+
+User-agent: SplitSignalBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: LinkpadBot
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
+User-agent: SEOkicks-Robot
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: linkfluence
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: SurdotlyBot
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: Xenu
+Disallow: /
+
+# --- added 2026-08: SEO suites missing from the original list ---
+User-agent: SISTRIX Crawler
+Disallow: /
+
+User-agent: sistrix
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+User-agent: Cocolyzebot
+Disallow: /
+
+User-agent: cognitiveSEO Bot
+Disallow: /
+
+User-agent: BrightEdge Crawler
+Disallow: /
+
+User-agent: SEOlizer
+Disallow: /
+
+User-agent: seoLyt
+Disallow: /
+
+User-agent: seoscanners
+Disallow: /
+
+# --- brand / social listening ---
+User-agent: AwarioBot
+Disallow: /
+
+User-agent: AwarioSmartBot
+Disallow: /
+
+User-agent: AwarioRssBot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: Twingly
+Disallow: /
+
+# --- AI-visibility / GEO rank-tracking crawlers ---
+User-agent: Scrunchbot
+Disallow: /
+
+# === AI training / dataset scrapers (blocked — these don't power user-facing AI search) ===
+User-agent: GPTBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# --- added 2026-08: Anthropic (was missing entirely) ---
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# --- added 2026-08: Apple, Meta, Google, Semrush training variants ---
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: meta-webindexer
+Disallow: /
+
+User-agent: Google-CloudVertexBot
+Disallow: /
+
+User-agent: CloudVertexBot
+Disallow: /
+
+User-agent: SemrushBot-OCOB
+Disallow: /
+
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+# --- added 2026-08: ByteDance / Chinese LLM training crawlers ---
+User-agent: TikTokSpider
+Disallow: /
+
+User-agent: DeepSeekBot
+Disallow: /
+
+User-agent: TongyiBot
+Disallow: /
+
+User-agent: YiyanBot
+Disallow: /
+
+User-agent: ChatGLM-Spider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: YisouSpider
+Disallow: /
+
+# --- added 2026-08: research / dataset / corpus builders ---
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: Ai2Bot-Dolma
+Disallow: /
+
+User-agent: ICC-Crawler
+Disallow: /
+
+User-agent: SBIntuitionsBot
+Disallow: /
+
+User-agent: Cotoyogi
+Disallow: /
+
+User-agent: Poseidon Research Crawler
+Disallow: /
+
+User-agent: laion-huggingface-processor
+Disallow: /
+
+User-agent: LAIONDownloader
+Disallow: /
+
+User-agent: imageSpider
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+User-agent: ISSCyberRiskCrawler
+Disallow: /
+
+# --- added 2026-08: commercial data resellers / misc AI harvesters ---
+User-agent: Panscient
+Disallow: /
+
+User-agent: panscient.com
+Disallow: /
+
+User-agent: QuillBot
+Disallow: /
+
+User-agent: quillbot.com
+Disallow: /
+
+User-agent: Thinkbot
+Disallow: /
+
+User-agent: Brightbot 1.0
+Disallow: /
+
+User-agent: Factset_spyderbot
+Disallow: /
+
+User-agent: Sidetrade indexer bot
+Disallow: /
+
+User-agent: KlaviyoAIBot
+Disallow: /
+
+User-agent: KunatoCrawler
+Disallow: /
+
+User-agent: AIWebIndex
+Disallow: /
+
+User-agent: aiHitBot
+Disallow: /
+
+User-agent: Echobot Bot
+Disallow: /
+
+User-agent: EchoboxBot
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: MyCentralAIScraperBot
+Disallow: /
+
+User-agent: Datenbank Crawler
+Disallow: /
+
+User-agent: netEstate Imprint Crawler
+Disallow: /
+
+# === Archival / scraping / monitoring bots ===
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Wayback
+Disallow: /
+
+User-agent: heritrix
+Disallow: /
+
+User-agent: WebVac
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: libwww-perl
+Disallow: /
+
+User-agent: Java
+Disallow: /
+
+User-agent: NetcraftSurveyAgent
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: BrandVerity
+Disallow: /
+
+User-agent: Mediatoolkitbot
+Disallow: /
+
+User-agent: trendictionbot
+Disallow: /
+
+User-agent: SerendeputyBot
+Disallow: /
+
+User-agent: paperlibot
+Disallow: /
+
+User-agent: Mail.RU_Bot
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+User-agent: WebMeUp
+Disallow: /
+
+User-agent: CheckMarkNetwork
+Disallow: /
+
+User-agent: NewsNow
+Disallow: /
+
+User-agent: news-please
+Disallow: /
+
+User-agent: Riddler
+Disallow: /
+
+User-agent: ev-crawler
+Disallow: /
+
+User-agent: domainsproject.org
+Disallow: /
+
+User-agent: webtechsurvey.com
+Disallow: /
+
+# --- added 2026-08: scraping-as-a-service platforms ---
+User-agent: FirecrawlAgent
+Disallow: /
+
+User-agent: Crawl4AI
+Disallow: /
+
+User-agent: Crawlspace
+Disallow: /
+
+User-agent: ApifyBot
+Disallow: /
+
+User-agent: ApifyWebsiteContentCrawler
+Disallow: /
+
+# === Unverified — added by request, pending log confirmation ===
+# No crawler by this name appears in crawler-user-agents (~1,500 patterns) or
+# ai.robots.txt as of 2026-08. "KKTIX" is a Taiwanese event-ticketing platform
+# (kktix.com / kktix.cc, owned by KKBOX/KKCompany); the bots associated with the
+# name are ticket-buying scripts that target kktix.cc itself, not site crawlers.
+# If this is showing up in analytics rather than access logs it is most likely
+# referral spam from *.kktix.cc and needs an analytics/WAF referer filter instead.
+# These lines are harmless no-ops if the agent doesn't exist. Confirm the real
+# token from your logs before relying on them.
+User-agent: KKTIX
+Disallow: /
+
+User-agent: Kittix
+Disallow: /
+
+User-agent: kktix
+Disallow: /
+
+# === Explicitly allowed: user-facing AI search / answer / assistant agents ===
+# These fetch on behalf of a real person asking a real question. Kept open on
+# purpose — they are how the site surfaces in AI answers. Listed explicitly so
+# the intent survives future edits to the wildcard group.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# === Everything else (traditional search engines + fallback) ===
+User-agent: *
+Content-signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+# Sitemap: https://example.com/sitemap.xml   # TODO: set your real sitemap URL
